@@ -88,14 +88,13 @@ export default function Founder() {
             className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-ink/10"
           >
             <Image
-              src="/founder.png"
+              src="/Founder.png"
               alt="Gauresh Bakane — Founder & CEO"
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 90vw, 40vw"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-night/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white/85">
               <div>
                 <div className="font-mono text-xs uppercase tracking-eyebrow">Nagpur, IN</div>
