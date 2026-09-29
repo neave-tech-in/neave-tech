@@ -67,9 +67,10 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 2.6 }}
             className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-mono uppercase tracking-eyebrow text-muted"
           >
-            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-brand" /> 50+ Clients</span>
-            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-brand" /> 10+ Govt Projects</span>
-            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-brand" /> 6 Services</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-brand" /> Since 2019</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-brand" /> MahaIT Empanelled</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-brand" /> ISO Certified</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-brand" /> MSME/Udyam Registered</span>
           </motion.div>
         </div>
 
