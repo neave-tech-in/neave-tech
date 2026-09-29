@@ -3,7 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import { Space_Mono, Bricolage_Grotesque, DM_Sans, Poppins } from 'next/font/google';
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider';
-import Loader from '@/components/Loader';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const spaceMono = Space_Mono({
   weight: ['400', '700'],
@@ -258,8 +258,8 @@ export default function RootLayout({
           />
         </noscript>
 
-        <Loader />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <WhatsAppButton />
       </body>
     </html>
   );
