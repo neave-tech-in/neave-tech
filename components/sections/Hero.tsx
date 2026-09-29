@@ -57,8 +57,8 @@ export default function Hero() {
             transition={{ duration: 0.9, delay: 2.3 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <MagneticButton href="#contact" variant="primary">Request Demo</MagneticButton>
-            <MagneticButton href="#case-studies" variant="ghost">View Our Work</MagneticButton>
+            <MagneticButton href="#contact" variant="primary">Get a Proposal in 48 Hours</MagneticButton>
+            <MagneticButton href="#case-studies" variant="ghost">Book a 20-min Call</MagneticButton>
           </motion.div>
 
           <motion.div

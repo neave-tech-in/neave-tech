@@ -65,7 +65,7 @@ export default function Navbar() {
           </nav>
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
-            <MagneticButton href="/contact" variant="primary">Request Demo</MagneticButton>
+            <MagneticButton href="/contact" variant="primary">Get a Proposal in 48 Hours</MagneticButton>
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
@@ -122,7 +122,7 @@ export default function Navbar() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="pt-6"
               >
-                <MagneticButton href="/contact" variant="primary">Request Demo</MagneticButton>
+                <MagneticButton href="/contact" variant="primary">Get a Proposal in 48 Hours</MagneticButton>
               </motion.div>
             </nav>
           </motion.div>
