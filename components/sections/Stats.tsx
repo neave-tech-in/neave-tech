@@ -46,7 +46,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [value]);
   return (
     <span className="inline-flex items-baseline gap-1">
-      <span ref={ref}>0</span>
+      <span ref={ref}>{value}</span>
       <span>{suffix}</span>
     </span>
   );
