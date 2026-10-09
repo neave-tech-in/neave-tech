@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/sections/Footer';
 import type { Metadata } from 'next';
 
+// Temporarily disabled; retained for later re-enablement.
 const caseStudySlugs = [
   'msetcl-visitor-management-system',
   'msetcl-guest-house-management',
@@ -117,6 +118,9 @@ const caseStudies: Record<string, {
 };
 
 export default function CaseStudyPage({ params }: { params: { slug: string } }) {
+  // Case-study pages temporarily disabled.
+  notFound();
+
   const study = caseStudies[params.slug];
 
   if (!study) {

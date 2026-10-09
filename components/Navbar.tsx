@@ -11,7 +11,8 @@ import clsx from 'clsx';
 const links = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
-  { href: '/case-studies', label: 'Portfolio' },
+  // { href: '/case-studies', label: 'Portfolio' },
+  { href: '/#case-studies', label: 'Portfolio' },
   { href: '/#founder', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
