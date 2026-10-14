@@ -99,7 +99,7 @@ export default function Founder() {
               <div>
                 <div className="font-mono text-xs uppercase tracking-eyebrow">Nagpur, IN</div>
               </div>
-              <div className="font-mono text-xs uppercase tracking-eyebrow">EST. 2024</div>
+              <div className="font-mono text-xs uppercase tracking-eyebrow">Since 2019</div>
             </div>
           </div>
         </div>

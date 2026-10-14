@@ -4,16 +4,18 @@ import Image from 'next/image';
 import RevealText from '@/components/RevealText';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 
-const row1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const row2 = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+// Keep each loop wider than the largest viewport so the marquee never exposes
+// an empty gap while retaining the existing animation speed.
+const row1 = [6, 7, 8, 9, 6, 7, 8, 9, 6, 7, 8, 9];
+const row2 = [10, 11, 13, 10, 11, 13, 10, 11, 13, 10, 11, 13];
 
 // ========== CHANGE: Descriptive alt texts ==========
 const clientAlts: Record<number, string> = {
-  1: "Mahavitaran",
-  2: "Mahanadi Coalfields",
-  3: "Ministry of Agriculture and Farmers Welfare",
-  4: "Ministry of Commerce and Industry",
-  5: "Ministry of Labour and Employment",
+ // 1: "Mahavitaran",
+  //2: "Mahanadi Coalfields",
+  //3: "Ministry of Agriculture and Farmers Welfare",
+ // 4: "Ministry of Commerce and Industry",
+  //5: "Ministry of Labour and Employment",
   6: "Datta Meghe Institute of Higher Education and Research",
   7: "AVBRH",
   8: "Paperhood Press",
@@ -22,12 +24,12 @@ const clientAlts: Record<number, string> = {
   11: "Industries, Energy, Labour and Mining Department (IELMD)",
   12: "Lake Tahoe School",
   13: "School of Scholars",
-  14: "Ceinsys Tech Ltd.",
-  15: "Client 15",
-  16: "Client 16",
-  17: "Client 17",
-  18: "Client 18",
-  19: "Adani Institute of Higher Education and Research",  
+  //14: "Ceinsys Tech Ltd.",
+  //15: "Client 15",
+  //16: "Client 16",
+  //17: "Client 17",
+  //18: "Client 18",
+  //19: "Adani Institute of Higher Education and Research",  
 };
 
 function ClientLogo({ index }: { index: number }) {
