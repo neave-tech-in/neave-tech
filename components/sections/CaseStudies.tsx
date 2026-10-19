@@ -13,27 +13,24 @@ if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
 const studies = [
   {
     no: '01',
-    tag: 'Public Sector · Energy',
-    title: 'Visitor Management System',
-    body: 'Centralised web-based visitor management for MSETCL Protocol Section — QR-code entry passes, pre-registration, approval workflow, and real-time entry/exit logging.',
+    tag: 'Public Sector · Mobility',
+    title: 'Transport Tracking System',
+    body: 'Real-time GPS fleet monitoring for a state transport department — geofencing, route deviation alerts, and live audit dashboards across thousands of vehicles.',
     image: '/case1.png',
-    slug: 'msetcl-visitor-management-system',
   },
   {
     no: '02',
-    tag: 'Public Sector · Government',
-    title: 'Industries Department Website',
-    body: 'Content updates, maintenance and support of the official website of Industries Department, Government of Maharashtra (industry.maharashtra.gov.in).',
+    tag: 'Public Sector · Workflow',
+    title: 'Digital Workflow System',
+    body: 'End-to-end digitization of departmental approvals and reporting: paperless case routing, signature workflows, and ministerial-level KPI dashboards.',
     image: '/case2.png',
-    slug: 'industries-department-maharashtra-website',
   },
   {
     no: '03',
-    tag: 'Public Sector · Energy',
-    title: 'Guest House Booking System',
-    body: 'Property and room listing, booking requests & approvals, occupancy view, and admin management for MSETCL guest houses.',
+    tag: 'Enterprise · ERP',
+    title: 'Business ERP System',
+    body: 'A custom ERP unifying procurement, HR, inventory, and finance under a single operational dashboard — purpose-built for a fast-growing manufacturer.',
     image: '/case3.png',
-    slug: 'msetcl-guest-house-management',
   },
 ];
 
@@ -135,7 +132,8 @@ export default function CaseStudies() {
                       <h3 className="font-display text-2xl tracking-tight leading-tight">{s.title}</h3>
                       <p className="mt-3 text-muted leading-relaxed">{s.body}</p>
                     </div>
-                    <a className="ulink inline-flex items-center gap-2 text-ink font-medium" href={`/case-studies/${s.slug}`}>
+                    {/* Case-study pages temporarily disabled. */}
+                    <a className="ulink inline-flex items-center gap-2 text-ink font-medium" href="#contact">
                       View Case Study <span aria-hidden>→</span>
                     </a>
                   </div>
@@ -198,7 +196,8 @@ export default function CaseStudies() {
                   </h3>
                   <p className="mt-5 text-muted text-lg leading-relaxed max-w-xl">{s.body}</p>
                 </div>
-                <a className="ulink inline-flex items-center gap-2 text-ink font-medium" href={`/case-studies/${s.slug}`}>
+                {/* Case-study pages temporarily disabled. */}
+                <a className="ulink inline-flex items-center gap-2 text-ink font-medium" href="#contact">
                   View Case Study <span aria-hidden>→</span>
                 </a>
               </div>

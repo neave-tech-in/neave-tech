@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
+// Temporarily disabled; retained for later re-enablement.
 export const metadata: Metadata = {
   title: 'Case Studies | Government & Public Sector Projects | Neave Tech',
   description:
@@ -43,6 +45,9 @@ const studies = [
 ];
 
 export default function CaseStudiesPage() {
+  // Case-study pages temporarily disabled.
+  notFound();
+
   return (
     <main>
       <Navbar />

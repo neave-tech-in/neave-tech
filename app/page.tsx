@@ -17,7 +17,6 @@ export default function HomePage() {
       <Hero />
       <Stats />
       <Capabilities />
-      <CaseStudies />
       <Services />
       <WhyUs />
       <Founder />

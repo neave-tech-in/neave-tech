@@ -4,8 +4,10 @@ import Image from 'next/image';
 import RevealText from '@/components/RevealText';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 
-const row1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const row2 = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+// Keep each loop wider than the largest viewport so the marquee never exposes
+// an empty gap while retaining the existing animation speed.
+const row1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const row2 = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 
 // ========== CHANGE: Descriptive alt texts ==========
 const clientAlts: Record<number, string> = {
@@ -27,7 +29,7 @@ const clientAlts: Record<number, string> = {
   16: "Client 16",
   17: "Client 17",
   18: "Client 18",
-  19: "Adani Institute of Higher Education and Research",  
+  19: "Adani Institute of Higher Education and Research",
 };
 
 function ClientLogo({ index }: { index: number }) {
