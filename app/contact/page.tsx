@@ -5,15 +5,15 @@ import RevealText from "@/components/RevealText";
 import ContactForm from "@/components/sections/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — Start a Project",
+  title: 'Contact Neave Tech — Start Your IT Project',
   description:
-    "Tell NeaveTech what you are building. We reply within one business day with an architecture and delivery plan for your ERP, IoT, cloud, blockchain, or web project.",
-  alternates: { canonical: "/contact" },
+    'Contact Neave Tech in Nagpur for ERP, IoT, cloud or government software projects. We reply within one business day with architecture and a clear delivery plan.',
+  alternates: { canonical: '/contact' },
   openGraph: {
-    title: "Contact NeaveTech — Start a Project",
+    title: 'Contact Neave Tech — Start Your IT Project',
     description:
-      "Tell us what you are building. We reply within one business day with an architecture and delivery plan — not a pitch.",
-   url: "https://www.neave.tech/contact",
+      'Contact Neave Tech in Nagpur for ERP, IoT, cloud or government software. Reply within one business day with architecture and delivery plan.',
+    url: 'https://www.neave.tech/contact',
   },
 };
 

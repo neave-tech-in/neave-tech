@@ -36,41 +36,37 @@ const sans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.neave.tech'),
   title: {
-    default: 'NeaveTech — Enterprise & Government IT Solutions',
-    template: '%s · NeaveTech',
+    default: 'Neave Tech — IT Company Nagpur | ERP, IoT & Gov Solutions',
+    template: '%s',
   },
   description:
-    'NeaveTech builds scalable IT systems for government and enterprise. Custom ERP, IoT, blockchain, cloud, and digital infrastructure engineered in Nagpur, India.',
+    'Neave Tech is a Nagpur-based IT company building ERP, IoT, cloud and government software for enterprises and public sector across Maharashtra since 2019.',
   keywords: [
-    'NeaveTech',
-    'Government IT',
-    'Enterprise ERP',
-    'IoT Solutions',
-    'Nagpur software company',
-    'Custom ERP',
-    'Blockchain',
-    'Digital transformation',
+    'Neave Tech',
+    'IT company Nagpur',
+    'software company Nagpur',
+    'ERP software company',
+    'IoT solutions Nagpur',
+    'government software development',
+    'web development company Nagpur',
   ],
-  authors: [{ name: 'NeaveTech' }],
+  authors: [{ name: 'Neave Tech' }],
   openGraph: {
-    title: 'NeaveTech — Enterprise & Government IT Solutions',
+    title: 'Neave Tech — IT Company Nagpur | ERP, IoT & Gov Solutions',
     description:
-      'Scalable IT systems for government & enterprise. ERP, IoT, Cloud, AI, Blockchain.',
+      'Nagpur-based IT company building ERP, IoT, cloud and government software for enterprises and public sector.',
     url: 'https://www.neave.tech',
-    siteName: 'NeaveTech',
+    siteName: 'Neave Tech',
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NeaveTech — Enterprise & Government IT Solutions',
+    title: 'Neave Tech — IT Company Nagpur | ERP, IoT & Gov Solutions',
     description:
-      'Scalable IT systems for government & enterprise. ERP, IoT, Cloud, AI, Blockchain.',
+      'Nagpur-based IT company building ERP, IoT, cloud and government software for enterprises and public sector.',
   },
   robots: { index: true, follow: true },
-  /*alternates: {
-    canonical: 'https://www.neave.tech',
-  }, */
   verification: {
     google: 'Gro9HqXImrkjUVAwBA3uHYuwfrPxV74RxaZeD1mhaW4',
   },

@@ -5,17 +5,17 @@ import Footer from "@/components/sections/Footer";
 import RevealText from "@/components/RevealText";
 
 export const metadata: Metadata = {
-  title: "Legal Policies — Neave Tech",
+  title: 'Legal Policies & Privacy | Neave Tech',
   description:
-    "Terms & Conditions, Privacy Policy, Refund & Cancellation Policy, Shipping & Delivery Policy, Pricing Policy and other legal policies for Neave Tech.",
+    'Terms & Conditions, Privacy Policy, Refund, Shipping and Pricing policies for Neave Tech — a brand of Neave Corporation Private Limited, Nagpur.',
   alternates: {
-    canonical: "/privacy",
+    canonical: '/privacy',
   },
   openGraph: {
-    title: "Legal Policies — Neave Tech",
+    title: 'Legal Policies & Privacy | Neave Tech',
     description:
-      "Legal policies governing the website, products and services offered by Neave Tech.",
-    url: "https://www.neave.tech/privacy",
+      'Terms, Privacy, Refund and other legal policies governing Neave Tech services and website.',
+    url: 'https://www.neave.tech/privacy',
   },
 };
 

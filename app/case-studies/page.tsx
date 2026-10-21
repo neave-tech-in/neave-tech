@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation';
 
 // Temporarily disabled; retained for later re-enablement.
 export const metadata: Metadata = {
-  title: 'Case Studies | Government & Public Sector Projects | Neave Tech',
+  title: 'Case Studies — Gov & Public Sector | Neave Tech',
   description:
-    'Real case studies of systems built for MSETCL and Government of Maharashtra — Visitor Management, Guest House Booking, Attendance System and more.',
+    'Real case studies by Neave Tech for MSETCL and Government of Maharashtra — Visitor Management, Guest House Booking, Attendance System and more.',
   alternates: {
     canonical: '/case-studies',
   },

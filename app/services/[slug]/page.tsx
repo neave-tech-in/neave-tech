@@ -16,13 +16,18 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Params): Metadata {
   const service = getService(params.slug);
   if (!service) return {};
+  const title = `${service.title} | Neave Tech`;
+  const description =
+    service.summary.length > 155
+      ? service.summary.slice(0, 152).trim() + '…'
+      : `${service.summary} Delivered by Neave Tech, Nagpur.`;
   return {
-    title: service.title,
-    description: service.summary,
+    title,
+    description,
     alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
-      title: `${service.title} · NeaveTech`,
-      description: service.summary,
+      title,
+      description,
       url: `https://www.neave.tech/services/${service.slug}`,
     },
   };

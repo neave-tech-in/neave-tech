@@ -7,15 +7,15 @@ import MagneticButton from "@/components/MagneticButton";
 import { services } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "Services — Six Lines, One Engineering Team",
+  title: 'IT Services — ERP, IoT, Cloud & More | Neave Tech',
   description:
-    "ERP & API development, Blockchain & AI, IoT, Cloud, Digital Marketing, and Web & Security. Cross-discipline engineering for government and enterprise from NeaveTech.",
-  alternates: { canonical: "/services" },
+    'Neave Tech offers ERP & API, IoT, Cloud, Blockchain & AI, Web Security and Digital Marketing. Engineering for government and enterprise from Nagpur.',
+  alternates: { canonical: '/services' },
   openGraph: {
-    title: "NeaveTech Services — Six Lines, One Engineering Team",
+    title: 'IT Services — ERP, IoT, Cloud & More | Neave Tech',
     description:
-      "ERP, IoT, Cloud, Blockchain & AI, Web & Security, and Digital Marketing — engineered together for government and enterprise.",
-    url: "https://www.neave.tech/services",
+      'ERP & API, IoT, Cloud, Blockchain & AI, Web Security and Digital Marketing from Neave Tech, Nagpur. Built for government and enterprise.',
+    url: 'https://www.neave.tech/services',
   },
 };
 

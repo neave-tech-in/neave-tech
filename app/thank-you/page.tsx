@@ -1,5 +1,13 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import LeadTracking from './LeadTracking';
+
+export const metadata: Metadata = {
+  title: 'Thank You | Neave Tech',
+  description: 'Your inquiry has been received by Neave Tech. We will respond within one business day.',
+  robots: { index: false, follow: false },
+  alternates: { canonical: '/thank-you' },
+};
 
 export default function ThankYouPage() {
   return (
