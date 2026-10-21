@@ -1,0 +1,29 @@
+# Neave Tech
+> High-performance digital infrastructure for government and enterprise. Nagpur-based IT company building ERP, IoT, cloud, AI and web systems since 2019.
+
+Neave Tech is a brand of Neave Corporation Private Limited (CIN U72900PN2019PTC182121). Founded 2019-02-12. ISO-certified, MSME/Udyam registered. Headquartered in Nagpur, Maharashtra, India.
+
+## Main pages
+- [Home](https://www.neave.tech/): Company overview, capabilities and services
+- [About](https://www.neave.tech/about): Founder Gauresh Bakane and company background
+- [Services](https://www.neave.tech/services): Full list of service lines
+- [Contact](https://www.neave.tech/contact): Start a project / inquiry form
+- [Privacy & Legal](https://www.neave.tech/privacy): Terms, privacy and other policies
+
+## Services
+- [ERP & API Development](https://www.neave.tech/services/erp-api-development)
+- [Blockchain & AI](https://www.neave.tech/services/blockchain-ai)
+- [IoT Solutions](https://www.neave.tech/services/iot-solutions)
+- [Cloud Solutions](https://www.neave.tech/services/cloud-solutions)
+- [Digital Marketing, Branding & Design](https://www.neave.tech/services/digital-marketing-branding)
+- [Web Ecosystem & Security](https://www.neave.tech/services/web-ecosystem-security)
+
+## Contact
+- Website: https://www.neave.tech
+- Email: mail@neave.tech
+- Phone: +91 928-475-5883
+- Address: 4th Floor, C Square Building, Mata Mandir Road, Khare Town, Dharampeth, Nagpur, Maharashtra
+
+## Optional
+- Sitemap: https://www.neave.tech/sitemap.xml
+- Robots: https://www.neave.tech/robots.txt
