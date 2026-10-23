@@ -20,9 +20,6 @@ const nextConfig = {
       { source: '/case-studies/:slug/', destination: '/case-studies/:slug', permanent: true },
 
       // Old paths
-      { source: '/portfolio', destination: '/case-studies', permanent: true },
-      { source: '/portfolio/', destination: '/case-studies', permanent: true },
-      { source: '/portfolio/:path*', destination: '/case-studies', permanent: true },
       { source: '/our-work', destination: '/case-studies', permanent: true },
       { source: '/our-work/', destination: '/case-studies', permanent: true },
       { source: '/projects', destination: '/case-studies', permanent: true },

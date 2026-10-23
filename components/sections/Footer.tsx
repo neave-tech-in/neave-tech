@@ -6,7 +6,7 @@ import Link from "next/link";
 const nav = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/#case-studies", label: "Portfolio" },
+  { href: "/portfolio?view=portfolio", label: "Portfolio" },
   { href: "/#founder", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -104,7 +104,7 @@ export default function Footer() {
                 <li key={s}>
                   <a
                     className="ulink text-ink/80 hover:text-ink"
-                    href="#services"
+                    href="/#services"
                   >
                     {s}
                   </a>

@@ -3,8 +3,8 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
 import Stats from '@/components/sections/Stats';
 import Capabilities from '@/components/sections/Capabilities';
-import CaseStudies from '@/components/sections/CaseStudies';
 import Services from '@/components/sections/Services';
+import CaseStudies from '@/components/sections/CaseStudies';
 import WhyUs from '@/components/sections/WhyUs';
 import Founder from '@/components/sections/Founder';
 import Clients from '@/components/sections/Clients';
@@ -36,6 +36,7 @@ export default function HomePage() {
       <Stats />
       <Capabilities />
       <Services />
+      <CaseStudies />
       <WhyUs />
       <Founder />
       <Clients />
