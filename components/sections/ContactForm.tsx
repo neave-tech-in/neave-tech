@@ -2,6 +2,25 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Script from 'next/script';
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+// Asks Google for an invisible reCAPTCHA v3 token for this submission.
+function getRecaptchaToken(): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const grecaptcha = (window as any).grecaptcha;
+    if (!RECAPTCHA_SITE_KEY || !grecaptcha) {
+      reject(new Error('reCAPTCHA not loaded'));
+      return;
+    }
+    grecaptcha.ready(() => {
+      grecaptcha
+        .execute(RECAPTCHA_SITE_KEY, { action: 'contact' })
+        .then(resolve, reject);
+    });
+  });
+}
 
 const serviceOptions = [
   'ERP & API Development',
@@ -70,11 +89,13 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
+      const recaptchaToken = await getRecaptchaToken();
+
       // API call → email + HubSpot contact create
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, recaptchaToken }),
       });
 
       if (res.ok) {
@@ -104,6 +125,11 @@ export default function ContactForm() {
       transition={{ duration: 0.7, ease: [0.7, 0, 0.2, 1] }}
       className="card p-7 sm:p-9 flex flex-col gap-5"
     >
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+        strategy="afterInteractive"
+      />
+
       <div className="grid sm:grid-cols-2 gap-5">
         <label className="flex flex-col gap-2 text-sm">
           <span className="text-ink/80">Full name *</span>
@@ -202,6 +228,18 @@ export default function ContactForm() {
           We reply within one business day with an architecture &amp; delivery plan — not a pitch.
         </p>
       </div>
+
+      <p className="text-[11px] text-muted/80 leading-relaxed">
+        This site is protected by reCAPTCHA and the Google{' '}
+        <a className="ulink" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+          Privacy Policy
+        </a>{' '}
+        and{' '}
+        <a className="ulink" href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">
+          Terms of Service
+        </a>{' '}
+        apply.
+      </p>
     </motion.form>
   );
 }

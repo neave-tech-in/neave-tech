@@ -10,10 +10,36 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#039;");
 }
 
+async function verifyRecaptcha(token: unknown) {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secret) {
+    console.error("[contact/route] RECAPTCHA_SECRET_KEY is not set");
+    return false;
+  }
+  if (typeof token !== "string" || !token) return false;
+
+  const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ secret, response: token }),
+  });
+  const data = await res.json();
+
+  // v3 returns a score from 0.0 (bot) to 1.0 (human)
+  return data.success === true && data.action === "contact" && (data.score ?? 0) >= 0.5;
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, company, phone, service, budget, timeline, message } = body;
+    const { name, email, company, phone, service, budget, timeline, message, recaptchaToken } = body;
+
+    if (!(await verifyRecaptcha(recaptchaToken))) {
+      return NextResponse.json(
+        { error: "reCAPTCHA verification failed." },
+        { status: 400 }
+      );
+    }
 
     if (!name || !email) {
       return NextResponse.json(

@@ -249,3 +249,8 @@ body {
 @media (max-width: 500px) { .portfolio-grid { grid-template-columns: 1fr; gap: 24px; }.portfolio-card { min-height: 310px; }.case-hero { padding: 112px 0 70px; }.case-intro { grid-template-columns: 1fr; padding: 38px 0 48px; }.case-cover { order: -1; }.case-facts { grid-template-columns: 1fr 1fr; padding-bottom: 42px; }.case-facts > div { min-height: 130px; padding: 0 10px; }.case-facts > div:nth-child(2), .case-facts > div:nth-child(4) { border-right: 0; }.case-sections article { grid-template-columns: 1fr; gap: 20px; min-height: 0; padding: 45px 4px; }.case-gallery { grid-template-columns:1fr; padding-top:42px; }.case-gallery-image { min-height:250px; } }
 @media (max-width: 900px) { .home-case-studies { padding:110px 0 85px; }.home-case-studies-inner { width:min(1062px,77vw); }.home-case-studies h2 { width:min(184px,80vw); margin-bottom:55px; padding:12px 24px 13px; font-size:1.25rem; }.home-case-studies .portfolio-card { min-height:183px; }.home-case-studies .portfolio-card h3 { margin-top:14px; font-size:.62rem; line-height:1.25; } }
 @media (max-width: 500px) { .home-case-studies .portfolio-grid { grid-template-columns:1fr; gap:24px; }.home-case-studies .portfolio-card { min-height:310px; }.home-case-studies .portfolio-card h3 { font-size:.91rem; } }
+
+/* Hide reCAPTCHA badge (disclosure text is shown in the contact form instead) */
+.grecaptcha-badge {
+  visibility: hidden;
+}
