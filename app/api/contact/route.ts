@@ -10,55 +10,15 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#039;");
 }
 
-async function verifyRecaptcha(token: unknown) {
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
-  if (!secret) {
-    console.error("[contact/route] RECAPTCHA_SECRET_KEY is not set");
-    return false;
-  }
-  if (typeof token !== "string" || !token) return false;
-
-  const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ secret, response: token }),
-  });
-  const data = await res.json();
-
-  // v3 returns a score from 0.0 (bot) to 1.0 (human)
-  return (
-    data.success === true &&
-    data.action === "contact" &&
-    (data.score ?? 0) >= 0.5
-  );
-}
-
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const {
-      name,
-      email,
-      company,
-      phone,
-      service,
-      budget,
-      timeline,
-      message,
-      recaptchaToken,
-    } = body;
-
-    if (!(await verifyRecaptcha(recaptchaToken))) {
-      return NextResponse.json(
-        { error: "reCAPTCHA verification failed." },
-        { status: 400 },
-      );
-    }
+    const { name, email, company, phone, service, budget, timeline, message } = body;
 
     if (!name || !email) {
       return NextResponse.json(
         { error: "Name and email are required." },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -70,7 +30,7 @@ export async function POST(req: NextRequest) {
       console.error("[contact/route] SMTP email configuration is incomplete");
       return NextResponse.json(
         { error: "Email is not configured." },
-        { status: 503 },
+        { status: 503 }
       );
     }
 
@@ -97,7 +57,7 @@ export async function POST(req: NextRequest) {
           <tr>
             <td style="padding: 16px 20px; border-bottom: 1px solid #e5e7eb; color: #4b5563; font-weight: 600; width: 34%;">${escapeHtml(label)}</td>
             <td style="padding: 16px 20px; border-bottom: 1px solid #e5e7eb; color: #111827;">${escapeHtml(value)}</td>
-          </tr>`,
+          </tr>`
       )
       .join("");
 
@@ -160,7 +120,7 @@ export async function POST(req: NextRequest) {
               lifecyclestage: "lead",
             },
           }),
-        },
+        }
       );
 
       if (!hubspotRes.ok) {
@@ -170,16 +130,14 @@ export async function POST(req: NextRequest) {
         console.log("[contact/route] HubSpot contact created");
       }
     } else {
-      console.warn(
-        "[contact/route] HUBSPOT_ACCESS_TOKEN not set; email sent without HubSpot sync",
-      );
+      console.warn("[contact/route] HUBSPOT_ACCESS_TOKEN not set; email sent without HubSpot sync");
     }
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("[contact/route] error:", err);
     return NextResponse.json(
       { error: "Something went wrong." },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
